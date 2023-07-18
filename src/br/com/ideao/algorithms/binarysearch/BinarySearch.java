@@ -9,6 +9,7 @@ public class BinarySearch {
         
     }
 
+    // O(log n)
     private static int binarySearch(int[] list, int item) { // lista ordenada
         
         if(isListEmpty(list)) {
