@@ -1,4 +1,4 @@
-package br.com.ideao.algorithms.seletionsort;
+package br.com.ideao.algorithms.selectionsort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
