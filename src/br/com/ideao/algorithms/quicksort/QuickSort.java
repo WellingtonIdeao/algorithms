@@ -12,8 +12,8 @@ public class QuickSort {
         for(int i: quicksort(arr)){
             System.out.println(i);
         }
-        
     }
+
     public static List<Integer> quicksort(List<Integer> arr){
         if(arr.size() < 2) {
             // base case, arrays with 0 or 1 element are already "sorted"
@@ -32,13 +32,11 @@ public class QuickSort {
             for(int i= 1; i < arr.size(); i++){
                 if(arr.get(i) <= pivot) {
                     less.add(arr.get(i));
+                }else {
+                     greater.add(arr.get(i));
                 }
             }
-            for(int i= 1; i < arr.size(); i++){
-                if(arr.get(i) > pivot) {
-                    greater.add(arr.get(i));
-                }
-            }
+    
             List<Integer> sorted = new ArrayList<>();
 
             sorted.addAll(quicksort(less));
@@ -46,6 +44,6 @@ public class QuickSort {
             sorted.addAll(quicksort(greater));
             
             return sorted;
-        }
+        }    
     }
-}
+}    
