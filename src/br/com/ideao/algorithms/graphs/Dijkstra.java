@@ -12,9 +12,9 @@ public class Dijkstra {
                         // vertice vizinhos
                         //    |
                         //    v 
-        graph.put("begin", new HashMap<>());
-        graph.get("begin").put("a", 6.00);
-        graph.get("begin").put("b", 2.00);
+        graph.put("start", new HashMap<>());
+        graph.get("start").put("a", 6.00);
+        graph.get("start").put("b", 2.00);
 
         graph.put("a", new HashMap<>());
         graph.get("a").put("end", 1.00);
@@ -32,8 +32,8 @@ public class Dijkstra {
 
         //tabelas dos pais
         Map<String, String> parents = new HashMap<>();
-        parents.put("a", "begin");
-        parents.put("b", "begin");
+        parents.put("a", "start");
+        parents.put("b", "start");
         parents.put("end", null);
 
         
@@ -57,7 +57,7 @@ public class Dijkstra {
              // Find the next node to process, and loop
             node = findLowestCost(costs);
         }
-
+        System.out.println("Cost from the start to each node:");
         System.out.println(costs);
     }
 
