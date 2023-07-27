@@ -42,12 +42,12 @@ public class Dijkstra {
             Double cost = costs.get(node); // valor do lowestCost
             Map<String, Double > neighbors = graph.get(node); //vizinhos do lowestCost no grafo.
             
-            for (String string : neighbors.keySet()) { // percorre cada vizinho.
-                Double newCost = cost + neighbors.get(string); // valor do lowestCost + valor do vizinho.
+            for (String n : neighbors.keySet()) { // percorre cada vizinho.
+                Double newCost = cost + neighbors.get(n); // valor do lowestCost + valor do vizinho.
 
-                if(costs.get(string) > newCost) { // valor atual do vizinho na tabela de custo > newCost.
-                    costs.put(string, newCost); // atualiza o valor do vizinho na tabela de custo.
-                    parents.put(string, node); //  atualiza o pai do vizinho, que será lowestCost.
+                if(costs.get(n) > newCost) { // valor atual do vizinho na tabela de custo > newCost.
+                    costs.put(n, newCost); // atualiza o valor do vizinho na tabela de custo.
+                    parents.put(n, node); //  atualiza o pai do vizinho, que será lowestCost.
                 }
               
             }
